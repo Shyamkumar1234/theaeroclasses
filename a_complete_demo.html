@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aero Classes</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins',sans-serif;
+    margin: 0% 0%; 
+    
+}
+
+
+.banner{
+    background-color: rgb(68, 219, 250);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    line-height: 35px;
+    font-weight: bold;
+    width: 100%;
+}
+.main-completed-container{
+    margin: 0% 10%;
+}
+.nav-bar{
+    margin: 0% 10%;
+}
+label img{
+    width: 50px;
+    height: 50px;
+}
+label h2{
+    margin-top: 7px;
+    line-height: 50px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    
+}
+.nav-bar{
+    justify-content:space-between;
+    height: 50px;
+    
+}
+nav ul{
+    list-style-type: none;
+    
+}
+nav ul li{
+    display: inline-block;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    line-height: 50px;
+    margin: 5px 10px;
+}
+nav ul li a:hover{
+    color: blue;
+}
+.btn{
+    background-color: blue;
+    color: white;
+    border-radius: 6px;
+}
+.btn:hover{
+    background-color: #577582;
+}
+.n-btn{
+   border: 1px solid gray;
+   border-radius: 6px;
+   transition: 0.3s ease-in-out;
+}
+.n-btn:hover{
+    background-color:#577582;
+}
+/*-------menu btn------*/
+
+#checkbtn{
+    color: #183b56;
+    float: right;
+    line-height: 50px;
+    margin-right: 10px;
+    font-size: 30px; 
+    display: none;  
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-bar ul{
+    display: none;
+}
+
+@media(max-width:995px){
+    #checkbtn{
+        display: block;
+    }
+    .nav-bar ul{
+        display: none;
+    }
+    
+    
+       
+    .header-container{
+        flex-direction: column-reverse;
+    }
+    .main-completed-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .companies{
+        margin-top: 100px;
+    }
+    .companies-choice{
+        flex-wrap: wrap;
+    }
+    .companies-choice img{
+        height: 20px;
+    }
+    .classic-1{
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
+    .classic-1 img{
+        height: 250px;
+        width: 300px;
+    }
+    .footer-container .column img{
+        width: 70px;
+        height: 70px;
+    }
+    .footer-container .column h2{
+        font-size: 15px;
+    }
+    .footer-container .column a{
+        padding: 2.5px;
+    }
+    .policy a{
+        margin: 5px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .header-container{
+        gap: 10px;
+    }
+}
+
+@media(max-width:416px){
+    label.logo h2{
+        font-size: 20px;
+    }
+    .column a{
+        padding: 6px;
+        font-size: 9px;
+    }
+    .column h2{
+        font-size: 8px;
+    }
+    .column img{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media(max-width:355px){
+    label.logo h2{
+        font-size: 16px;
+    }
+    .column a{
+        padding: 5px;
+        font-size: 8px;
+    }
+    .column h2{
+        font-size: 7px;
+    }
+    
+}
+
+.header-container{
+    margin-top: 30px;
+    gap: 50px;
+}
+.header-container-1{
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+.header-container-1 h1{
+    color: #183b56;
+    margin-top: 50px;
+}
+.header-container-1 p{
+    color: #577582;
+}
+.header-container-2 img{
+    width: 100%;
+}
+.btn-2{
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 6px;
+    margin-top: 20px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+.btn-2:hover{
+    background-color: aqua;
+}
+.content-2{
+    margin-top: 20px;
+    text-align: center;
+}
+.companies{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.companies-choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo-2{
+    height: 46px;
+}
+.user-panel{
+    margin-top: 30px;
+    text-align: center;
+}
+.more-btn{
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid gray;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 5px gray;
+}
+.feature-main-container{
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 400px;
+    justify-content: space-between;
+}
+.feature-main-container::-webkit-scrollbar{
+    display: none;
+}
+
+.another_text h2{
+    margin-top: 20px;
+    text-align: center;
+}
+.feature-2{
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 400px;
+    justify-content: space-between;
+}
+.feature-2::-webkit-scrollbar{
+    display: none;
+}
+.math{
+    width: 250px;
+    height: 350px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px 5px gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    margin: 16px;
+    
+    animation-name: myanimation;
+    animation-duration:4s;
+    transition: linear;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes myanimation{
+    from{
+        translate: -100vw;
+    }
+    to{
+        translate: 0vw ;
+    }
+}
+.math-2{
+    animation-name: myanimation-2;
+    animation-duration:4s;
+    transition: linear;
+    animation-direction: reverse;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+@keyframes myanimation-2{
+    from{
+        translate: -100vw;
+    }
+    to{
+        translate: 0vw ;
+    }
+}
+
+.shivam img{
+    animation-name: myanimation-3;
+    animation-duration:2.5s;
+    transition: linear;
+    animation-direction:alternate;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;    
+}
+@keyframes myanimation-3{
+    from{
+        translate: -50vw;
+    }
+    to{
+        translate: 0vw ;
+    }
+}
+
+.header-container-2 img{
+    animation-name: myanimation-4;
+    animation-duration:1s;
+    transition: linear;
+    animation-direction:alternate;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes myanimation-4{
+    from{
+        translate: 50vw;
+    }
+    to{
+        translate: 0vw ;
+    }
+}
+
+.header-container-1 .content{
+    animation-name: myanimation-5;
+    animation-duration:1s;
+    transition: linear;
+    animation-direction:alternate;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes myanimation-5{
+    from{
+        translate: -50vw;
+    }
+    to{
+        translate: 0vw ;
+    }
+}
+
+
+.main-completed-container{
+    overflow: hidden;
+}
+.math p{
+    font-size: 15px;
+    text-align: center;
+}
+.math img{
+    width: 220px;
+    height: 180px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 10px;   
+}
+.subj{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(82, 227, 246);
+    text-shadow: 2px 2px 4px black;
+    
+}
+.enroll-btn{
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.5s ease-in-out;
+}
+.enroll-btn:hover{
+    background-color: green;
+}
+.classic-1{
+    gap: 100px;
+}
+.image-2 img{
+    height: 400px;
+    
+}
+.text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.shivam img{
+    border-radius: 50%;
+    height: 300px;
+}
+.keys{
+    text-align: center;
+    padding: 50px;
+}
+.classic-2{
+    flex-direction: row-reverse;
+}
+.demo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #183b56;
+    height: 200px;
+    color: white;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: #ebf2fa; */
+   
+}
+.column img{
+    width: 150px;
+    height: 160px;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.column a{
+    padding: 10px;
+    
+    color: #202e38;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.column h2{
+    
+    color: #183b56;
+}
+/* .sub-footer{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.sub-footer{
+    background-color: #b9cde4;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+.policy{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b9cde4;
+}
+.policy a{
+    
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
+}
+.policy a:hover{
+    color: blue;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="banner">
+        <p>👉The Aero Classes is now open</p>
+    </div>
+
+    
+
+    <nav class="nav-bar flex">
+        
+        <!-- <div class="complete-logo"> -->
+            
+        <label class="logo flex">
+            <img src="https://i.postimg.cc/xCmPWnCk/logo.jpg" alt="logo">
+            <h2>The Aero Classes</h2>
+        </label>
+        
+        <ul class="ul flex">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">My Batch</a></li>
+            <li><a href="sinup.html" class="n-btn">Sign Up</a></li>
+            <li><a href="form.html" class="btn">Login</a></li>
+        </ul>
+        <input type="checkbox" id="check">
+            <label for="check" id="checkbtn" ><li class="fa fa-bars"></li></label>
+           
+    </nav>
+
+
+
+    <div class="main-completed-container">
+    <!-------------------- nav bar completed above-------------------------- -->
+
+
+    <div class="header-container flex">
+        <div class="header-container-1">
+            <div class="content">
+            <h1>Way to Success</h1>
+            <p>Our main motive to clear all doubts of individual student.And prepare them for desired Examinations.
+                Here we will provide Live doubt session,carrier guidance,Live classes on zoom,DPP,online test </p>
+                <div class="button">
+                <a href="#" class="btn-2">Get started</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container-2">
+            <img src="https://usability-hub-design.netlify.app/assets/group-img.jpeg" alt="">
+        </div>
+    </div>
+
+    <!-- -----------------------header section completed above-------------------------- -->
+    <div class="companies">
+      <div class="content-2">
+        <p>This is best education platform,take decision yourself,then enroll in this course.</p>
+      </div>
+    
+      <div class="companies-choice">
+        <img src="https://usability-hub-design.netlify.app/assets/google.png" alt="google" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/amazon.png" alt="amazon" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/airtable.png" alt="" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/godaddy.svg" alt="" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/asana.png" alt="" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/box.png" alt="" class="logo-2">
+        <img src="https://usability-hub-design.netlify.app/assets/taskrabbit.png " alt="" class="logo-2">
+      </div>
+    </div>
+
+    <!-------------------------Companies Details completed above---------------------------->
+
+    <div class="user-panel">
+        <h2>Our courses features for online students</h2>
+        <a href="" class="more-btn">See all features <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+
+    <div class="feature-main-container feature-1 flex">
+        <div class="math">
+            <div class="image">
+                <h2 class="subj">MATHEMATICS</h2>
+                <img src="https://wallpapercave.com/wp/wp4022822.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div> 
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>           
+        </div>
+
+        <div class="physics math">
+            <div class="image">
+                <h2 class="subj" style="color: red;">PHYSICS</h2>
+                <img src="https://wallpapercave.com/wp/wp4499420.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="chemistry math">
+            <div class="image">
+                <h2 class="subj">CHEMISTRY</h2>
+                <img src="https://wallpapercave.com/wp/wp3164928.png" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>  
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>   
+        </div>
+        <div class="bio math">
+            <div class="image">
+                <h2 class="subj">BIOLOGY</h2>
+                <img src="https://getwallpapers.com/wallpaper/full/9/9/e/860341-biology-wallpapers-1920x1200-for-ipad-pro.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="compatative-exams math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://files.magzter.com/resize/magazine/1605510794/1605516713/view/3.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="compatative-exams math">
+            <div class="image">
+                <h2 class="subj" style="color: green;">COMPATATIVE</h2>
+                <img src="https://d13loartjoc1yn.cloudfront.net/article/1684235410_Competitive%20Exams%202023.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+    </div>
+
+        <div class="another_text">
+            <h2>Another Features 👌</h2>
+        </div>
+        <div class="feature-2 flex">
+        <div class="iit-jee math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://i.ytimg.com/vi/NrSeGVgoYVQ/maxresdefault.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="neet math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://timesofindia.indiatimes.com/photo/msid-72073355,imgsize-434895.cms" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="diploma math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://thumbs.dreamstime.com/z/diploma-ribbon-books-19592194.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="para-medical math-2 math">
+            <div class="image">
+                <h2 class="subj" style="color: yellow;">PARAMEDICAL</h2>
+                <img src="https://cdn.wallpapersafari.com/12/95/ozi2L1.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="isro math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://content.techgig.com/photo/80159140/isro-launches-free-online-course-on-remote-sensing.jpg?160829" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>   
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>
+        <div class="drdo math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://static.theprint.in/wp-content/uploads/2018/06/GettyImages-944660810-e1553690630992.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>  
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>   
+        </div>
+        <div class="computer-course math-2 math">
+            <div class="image">
+                <h2 class="subj">COMPUTER COURSE</h2>
+                <img src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2019/08/23163710/Computer-Courses-After-12th-Commerce.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>  
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>   
+        </div>
+        <div class="bussiness math-2 math">
+            <div class="image">
+                <h2 class="subj">BUSINESS INTELLIGENCE</h2>
+                <img src="https://getwallpapers.com/wallpaper/full/2/1/6/293489.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>complete chapterwise syllabus + problem solution pdf ,practice questions pdf + Live classes</p>
+            </div>  
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>   
+        </div>
+        <div class="study-roadmap math-2 math">
+            <div class="image">
+                <h2 class="subj"></h2>
+                <img src="https://cdn.wallpapersafari.com/37/46/atxMuO.jpg" alt="">
+            </div>
+            <div class="course-feature">
+                <p>Study Roadmap for future</p>
+            </div>  
+            <a href="#" class="enroll-btn">Enroll now <i class="fa-solid fa-arrow-right-long"></i></a>  
+        </div>       
+    </div>
+
+
+
+    <!--------------------------course details completed above------------------------------->
+
+    <div class="keys">
+        <h1>Study key points.</h1>
+    </div>
+
+    <div class="classic-1 flex">
+        <div class="image-2">
+            <img src="https://usability-hub-design.netlify.app/assets/feature img1.png" alt="">
+        </div>
+        <div class="text">
+            <div class="text-1">
+            <h2>Self Study Motivation</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla dolor rerum voluptates maiores, ullam quia dolore error asperiores reiciendis.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="classic-1 flex classic-2">
+        <div class="image-2">
+            <img src="https://usability-hub-design.netlify.app/assets/feature img2.png" alt="">
+        </div>
+        <div class="text">
+            <div class="text-1">
+            <h2>Thik for self future</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla dolor rerum voluptates maiores, ullam quia dolore error asperiores reiciendis.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="classic-1 flex">
+        <div class="image-2 shivam" id="shiva">
+            <img src="https://i.postimg.cc/dVThYBdf/Screenshot-2023-12-26-190619.png" alt="">
+        </div>
+        <div class="text">
+            <div class="text-1">
+            <h2>Shivam Singhaniya</h2>
+            <p>This is a good team member of The Aero Classes.There are so many students already guided by him.</p>
+            </div>
+        </div>
+    </div> 
+
+
+
+</div>
+    <!---------------------classic support-------------------------------->
+
+    <div class="demo-container">
+        <div class="box-1"><h2>Take demo class Today</h2></div>
+        <div class="box-2"> <p>please attend demo at least one time.</p></div>
+       <div class="box-3"><a href="#" class="enroll-btn">take demo</a></div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="column">
+                <img src="https://i.postimg.cc/xCmPWnCk/logo.jpg" alt="">
+                <h2>The Aero Classes</h2>
+
+            </div>
+            <div class="column">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Courses</a>
+                <a href="#">eligibility</a>
+            </div>
+            <div class="column">
+                <a href="#">Faculty</a>
+                <a href="#">Notice</a>
+                <a href="#">Online</a>
+                <a href="#">Services</a>                
+            </div>
+            <div class="column">
+                <a href="#">Information</a>
+                <a href="#">Team</a>
+                <a href="#">Teachers</a>
+                <a href="#">Contact Us</a>  
+            </div>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        <div class="policy">
+            <a href="#">Copyrite&copy;</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms and conditions</a>
+            <a href="#">Security Informations</a>
+        </div>
+    </div>
+    
+
+
+
+
+    
+    <script src="https://kit.fontawesome.com/7e942f62fd.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
